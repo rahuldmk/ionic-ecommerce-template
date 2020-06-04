@@ -1,0 +1,14 @@
+{
+  "appId": "io.ionic.vegetable",
+  "appName": "vegetable-shop",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/home/dp/Software/android-studio-ide-192.6392135-linux/android-studio/bin/studio.sh"
+}

@@ -1,1 +1,1 @@
-# ionic-ecommerce-template
+#ionic ecommerce template

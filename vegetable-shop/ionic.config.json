@@ -1,0 +1,7 @@
+{
+  "name": "vegetable-shop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

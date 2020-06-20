@@ -1,0 +1,12 @@
+.text-align-center{
+    text-align: center;
+}
+.login-input-ctrl{
+    background: #839641;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.logo{
+    width:150px;
+}

@@ -1,11 +1,12 @@
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import Dashboard from './pages/Dashboard';
 import Login from './pages/login/LoginPage';
 import React from 'react';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
-
+import {ProtectedRoute} from './components/ProtectedRoute';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -25,6 +26,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 const App: React.FC = () => {
 
   return (
@@ -35,6 +37,7 @@ const App: React.FC = () => {
           <IonRouterOutlet id="main">
             <Route path="/page/:name" component={Page} exact />
             <Route path="/auth/login" component={Login} exact />
+            <ProtectedRoute path="/page/dashboard" component={Dashboard} />
             <Redirect from="/" to="/page/Inbox" exact />
           </IonRouterOutlet>
         </IonSplitPane>

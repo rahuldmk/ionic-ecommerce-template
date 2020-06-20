@@ -1,4 +1,5 @@
-import { IonContent, IonList,IonGrid,IonRow,IonCol, IonButton, IonLabel, IonItem, IonInput, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonAvatar, IonList, IonGrid, IonRow, IonCol, IonButton, IonLabel, IonItem, IonInput, IonPage } from '@ionic/react';
+import { closeCircle, home, star, navigate, informationCircle, checkmarkCircle, shuffle } from 'ionicons/icons';
 import React from 'react';
 import { useParams } from 'react-router';
 
@@ -16,27 +17,44 @@ const Login: React.FC = () => {
   return (
     <IonPage>
       <IonContent color="primary ion-padding" fullscreen>
-        <IonList>
-          <IonItem>
-            <IonLabel color="primary" position="stacked">User Name:</IonLabel><br />
-            <IonInput placeholder="User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
-          </IonItem>
-          <IonItem>
-            <IonLabel color="primary" position="stacked">Password:</IonLabel><br />
-            <IonInput type="password" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
-          </IonItem>
-          
-        </IonList>
 
         <IonGrid>
-          <IonRow>
-            <IonCol><IonButton color="danger">Login</IonButton></IonCol>
+          <IonRow className="ion-align-items-center">
+            <IonCol className="text-align-center"><img className="logo" src="https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX34974984.jpg" /></IonCol>
           </IonRow>
         </IonGrid>
-
-      </IonContent>
-
-    </IonPage>
+        <IonGrid>
+          <IonRow className="ion-align-items-center">
+            <IonCol>
+              <h3><b>Sign in</b></h3>
+              <p>Please fill in the credentials</p>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+        <IonGrid>
+          <IonRow className="login-input-ctrl">
+            <IonCol size="2">
+            <IonIcon icon={closeCircle} slot="end" />
+            </IonCol>
+            <IonCol>
+              <IonInput placeholder="User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            </IonCol>
+          </IonRow>
+          <IonRow className="login-input-ctrl">
+            <IonCol size="2">
+            </IonCol>
+            <IonCol>
+              <IonInput type="password" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <IonButton expand="full" color="dark" shape="round">Login</IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+      </IonContent >
+    </IonPage >
   );
 };
 

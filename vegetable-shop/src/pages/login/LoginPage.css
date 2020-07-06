@@ -10,3 +10,11 @@
 .logo{
     width:150px;
 }
+
+.input-icon-color{
+    color:#444;
+}
+
+.input-border-radius{
+    border-radius: 5px;
+}

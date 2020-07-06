@@ -1,5 +1,5 @@
 import { IonContent, IonIcon, IonAvatar, IonList, IonGrid, IonRow, IonCol, IonButton, IonLabel, IonItem, IonInput, IonPage } from '@ionic/react';
-import { closeCircle, home, star, navigate, informationCircle, checkmarkCircle, shuffle } from 'ionicons/icons';
+import { closeCircle, personOutline, lockClosedOutline } from 'ionicons/icons';
 import React from 'react';
 import { useParams } from 'react-router';
 
@@ -31,25 +31,25 @@ const Login: React.FC = () => {
             </IonCol>
           </IonRow>
         </IonGrid>
+
+        <IonList className="input-border-radius">
+          <IonItem>
+            <IonInput value="" placeholder="Enter User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            <IonIcon slot="end" icon={personOutline} className="input-icon-color" />
+          </IonItem>
+        </IonList>
+        <br />
+        <IonList className="input-border-radius">
+          <IonItem>
+            <IonInput type="password" value="" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            <IonIcon slot="end" icon={lockClosedOutline} className="input-icon-color" />
+          </IonItem>
+        </IonList>
+
         <IonGrid>
-          <IonRow className="login-input-ctrl">
-            <IonCol size="2">
-            <IonIcon icon={closeCircle} slot="end" />
-            </IonCol>
-            <IonCol>
-              <IonInput placeholder="User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
-            </IonCol>
-          </IonRow>
-          <IonRow className="login-input-ctrl">
-            <IonCol size="2">
-            </IonCol>
-            <IonCol>
-              <IonInput type="password" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
-            </IonCol>
-          </IonRow>
           <IonRow>
             <IonCol>
-              <IonButton expand="full" color="dark" shape="round">Login</IonButton>
+              <IonButton expand="full" color="warning" shape="round">Login</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

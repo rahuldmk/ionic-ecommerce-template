@@ -2,7 +2,7 @@ import { IonContent, IonChip, IonIcon, IonList, IonGrid, IonRow, IonCol, IonButt
 import { personOutline, lockClosedOutline, logoFacebook, logoGoogle } from 'ionicons/icons';
 import React from 'react';
 import { useParams } from 'react-router';
-
+import OrSeperator from '../../components/OrSeperator';
 import './LoginPage.css';
 
 const Login: React.FC = () => {
@@ -37,14 +37,14 @@ const Login: React.FC = () => {
 
         <IonList className="input-border-radius">
           <IonItem>
-            <IonInput value="" placeholder="Enter User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            <IonInput name="user_name" value="" placeholder="Enter User Name" onIonChange={e => setText(e.detail.value!)}></IonInput>
             <IonIcon slot="end" icon={personOutline} className="input-icon-color" />
           </IonItem>
         </IonList>
         <br />
         <IonList className="input-border-radius">
           <IonItem>
-            <IonInput type="password" value="" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
+            <IonInput type="password" name="user_password" value="" placeholder="Password" onIonChange={e => setText(e.detail.value!)}></IonInput>
             <IonIcon slot="end" icon={lockClosedOutline} className="input-icon-color" />
           </IonItem>
         </IonList>
@@ -57,10 +57,7 @@ const Login: React.FC = () => {
             </IonCol>
           </IonRow>
 
-          <IonRow>
-            <IonCol className="hr-line-center">
-            </IonCol>
-          </IonRow>
+          <OrSeperator ordisplay={true} color='#ffc409'></OrSeperator>
 
 
           <IonRow className="ion-align-items-start">

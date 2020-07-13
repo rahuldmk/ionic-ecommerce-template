@@ -1,0 +1,23 @@
+.or {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:grey;
+  }
+  
+  .or:after,
+  .or:before {
+      content: "";
+      display: block;
+      background: #ccc;
+      height:1px;
+      margin: 0 10px;
+      width: 100%;
+  }
+
+  .orlabel{
+      border-radius: 25px;
+      background: #fff;
+      color: #444;
+      padding: 10px;
+  }

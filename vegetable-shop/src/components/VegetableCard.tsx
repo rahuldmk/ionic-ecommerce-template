@@ -1,17 +1,19 @@
 import React from 'react';
-import { IonCard, IonLabel } from '@ionic/react';
-
+import './VegetableCard.css';
 
 interface VegetableCardProps {
     title: string,
-    svgpath: string
+    imgname: string
 };
 
-const VegetableCard: React.FC<VegetableCardProps> = ({ title, svgpath }) => {
+const VegetableCard: React.FC<VegetableCardProps> = ({ title, imgname }) => {
     return (
-        <IonCard>
-            <IonLabel>{{title}}</IonLabel>
-        </IonCard>
+        <div className="v-card">
+            <img src={'../assets/svg/' + imgname + '.svg'} />
+            <div className="title">
+                <p>{title}</p>
+            </div>
+        </div>
     );
 };
 

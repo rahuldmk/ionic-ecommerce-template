@@ -52,8 +52,8 @@ const Login: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol>
-              <IonButton expand="full" color="warning" shape="round">Login</IonButton>
-              <IonButton expand="full" color="warning" shape="round" fill="clear">Forgot Password</IonButton>
+              <IonButton expand="full" color="light" shape="round">Login</IonButton>
+              <IonButton expand="full" color="light" shape="round" fill="clear">Forgot Password</IonButton>
             </IonCol>
           </IonRow>
 
@@ -62,12 +62,12 @@ const Login: React.FC = () => {
 
           <IonRow className="ion-align-items-start">
             <IonCol className="ion-align-self-start">
-              <IonButton expand="block" color="warning" fill="outline">
+              <IonButton expand="block" color="light" fill="outline">
                 <IonIcon slot="start" icon={logoFacebook} />
               Login with Facebook
               </IonButton>
 
-              <IonButton expand="block" color="warning" fill="outline">
+              <IonButton expand="block" color="light" fill="outline">
                 <IonIcon slot="start" icon={logoGoogle} />
               Login with Google
               </IonButton>

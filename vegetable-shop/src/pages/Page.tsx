@@ -1,4 +1,4 @@
-import { IonButtons, IonContent,IonListHeader,IonLabel, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonButtons, IonContent,IonList,IonListHeader,IonLabel, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide, IonGrid, IonRow, IonCol } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
@@ -36,9 +36,11 @@ const Page: React.FC = () => {
             <img src="https://i.pinimg.com/originals/df/c1/f9/dfc1f9ba2734aa94690f009d721440d7.jpg" />
           </IonSlide>
         </IonSlides>
+        <IonList>
         <IonListHeader>
           <IonLabel>Shop by category</IonLabel>
         </IonListHeader>
+        </IonList>
         <IonGrid>
           <IonRow>
             <IonCol>

@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import VegetableCard from '../components/VegetableCard';
+import Bestsellers from '../components/best-sellers/BestSellers';
 import './Page.css';
 
 const slideOpts = {
@@ -68,6 +69,7 @@ const Page: React.FC = () => {
         <IonListHeader>
           <IonLabel>Shop Bestsellers</IonLabel>
         </IonListHeader>
+        <Bestsellers data="Test" img="test"></Bestsellers>
       </IonContent>
     </IonPage>
   );

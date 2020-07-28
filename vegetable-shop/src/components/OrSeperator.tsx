@@ -3,7 +3,7 @@ import './OrSeperator.css';
 
 interface lineSeperatorProps {
     ordisplay: boolean;
-    color:string
+    color:string;
 }
 const OrSeperator: React.FC<lineSeperatorProps> = ({ ordisplay,color }) => {
 

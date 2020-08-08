@@ -5,7 +5,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import VegetableCard from '../components/VegetableCard';
 import Bestsellers from '../components/best-sellers/BestSellers';
 import './Page.css';
-
+import bestSellerData from '../components/best-sellers/data.json';
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
@@ -69,7 +69,7 @@ const Page: React.FC = () => {
         <IonListHeader>
           <IonLabel>Shop Bestsellers</IonLabel>
         </IonListHeader>
-        <Bestsellers data="Test" img="test"></Bestsellers>
+        <Bestsellers data={bestSellerData} />
       </IonContent>
     </IonPage>
   );

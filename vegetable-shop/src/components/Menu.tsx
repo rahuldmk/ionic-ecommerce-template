@@ -8,6 +8,7 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonAvatar,
 } from '@ionic/react';
 
 import React from 'react';
@@ -69,6 +70,13 @@ const Menu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
+      <IonItem>
+          <IonAvatar slot=""><img src="./assets/logo.png" /></IonAvatar>
+          <IonLabel>
+            <h2>Rahul Khakse</h2>
+            <h3>Prime-User</h3>
+          </IonLabel>
+        </IonItem>
         <IonList id="inbox-list">
           <IonListHeader>Inbox</IonListHeader>
           <IonNote>hi@ionicframework.com</IonNote>
